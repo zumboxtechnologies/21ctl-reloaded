@@ -17,7 +17,7 @@ const Button = ({
     <button onClick={action ? () => action() : undefined}>
       <div
         className={cn(
-          "relative bg-primary text-primaryBlack font-semibold myFlex justify-center px-4 w-fit h-[43px]",
+          "relative bg-primary text-primaryBlack font-neuebold myFlex justify-center px-4 w-fit h-[43px]",
           className
         )}
       >

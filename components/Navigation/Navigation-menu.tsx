@@ -29,8 +29,8 @@ export function NavigationMenuLinks({ navLinks }: { navLinks: NavLink[] }) {
               <NavigationMenuTrigger
                 className={`relative ${
                   pathName === item.navLink
-                    ? "after:absolute after:bg-primary font-semibold after:bottom-0 after:right-4 after:left-4 after:h-[2px]"
-                    : "font-medium text-primaryGray"
+                    ? "after:absolute after:bg-primary font-neuebold after:bottom-0 after:right-4 after:left-4 after:h-[2px]"
+                    : "text-primaryGray"
                 }`}
               >
                 {item.navTitle}
@@ -57,8 +57,8 @@ export function NavigationMenuLinks({ navLinks }: { navLinks: NavLink[] }) {
                   <NavigationMenuLink
                     className={`relative ${
                       pathName === item.navLink
-                        ? "after:absolute after:bg-primary font-semibold after:bottom-0 after:right-4 after:left-4 after:h-[2px]"
-                        : "font-medium text-primaryGray"
+                        ? "after:absolute after:bg-primary font-neuebold after:bottom-0 after:right-4 after:left-4 after:h-[2px]"
+                        : "text-primaryGray"
                     } ${navigationMenuTriggerStyle()}`}
                   >
                     {item.navTitle}
@@ -104,7 +104,7 @@ const ListItem = React.forwardRef<
             )}
           >
             <Polygon className="w-12 h-12 bg-white" />
-            <h4 className="text-2xl font-semibold">{title}</h4>
+            <h4 className="text-2xl font-neuebold">{title}</h4>
             <p>{children}</p>
           </div>
         </a>

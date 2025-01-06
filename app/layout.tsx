@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "../public/Neue_Haas_Grotesk_Display_Pro/stylesheet.css";
 
 export const metadata: Metadata = {
   title: "21st Century Technologies",
@@ -14,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="font-neuereg antialiased">{children}</body>
     </html>
   );
 }

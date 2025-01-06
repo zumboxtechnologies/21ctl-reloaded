@@ -22,7 +22,7 @@
   }
 
   p {
-    @apply text-base font-medium;
+    @apply text-base;
   }
   :root {
     --background: 0 0% 100%;

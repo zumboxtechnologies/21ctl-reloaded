@@ -23,6 +23,11 @@ export const MainNavLinks = [
         desc: "Meet the visionary team steering us toward innovation and growth.",
         link: "/about",
       },
+      {
+        title: "Careers & Job Openings",
+        desc: "Join our team and contribute to creating transformative solutions.",
+        link: "/about",
+      },
     ],
   },
   {
