@@ -57,7 +57,7 @@
     @apply flex items-center;
   }
 
-  .container {
+  .myContainer {
     @apply max-lg:px-[3%] px-[5%] py-10 md:py-16;
   }
   .element {

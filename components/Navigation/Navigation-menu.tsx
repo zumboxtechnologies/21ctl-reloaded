@@ -40,7 +40,7 @@ export function NavigationMenuLinks({ navLinks }: { navLinks: NavLink[] }) {
                   {item.navSubMenus.map((subItem, subIndex) => (
                     <ListItem
                       key={subIndex}
-                      tabIndex={subIndex}
+                      tabIndex={subItem.bgType}
                       href={subItem.link}
                       title={subItem.title}
                     >
@@ -79,16 +79,17 @@ const ListItem = React.forwardRef<
 >(({ className, title, children, tabIndex, ...props }, ref) => {
   const backgroundColor = () => {
     switch (tabIndex) {
-      case 0:
-        return "bg-dimYellow";
       case 1:
-        return "bg-curiousBlue";
-      case 2:
-        return "bg-dimGray";
-      case 3:
         return "bg-dimYellow";
-      case 4:
+      case 2:
+        return "bg-curiousBlue";
+      case 3:
         return "bg-carise";
+      case 4:
+        return "bg-lima";
+      case 5:
+        return "bg-dimGray";
+
       default:
         return "bg-pink-100"; // Default background
     }

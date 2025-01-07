@@ -16,6 +16,7 @@ export default {
         carise: "#FEF1F9",
         curiousBlue: "#EFF9FF",
         dimGray: "#EFEFEF",
+        lima: "#FAFFE5",
         dimYellow: "#FFFDEA",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
