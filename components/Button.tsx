@@ -6,11 +6,13 @@ const Button = ({
   cta,
   link,
   className,
+  polycolor,
   action,
 }: {
   cta: string;
   link?: string;
   className?: string;
+  polycolor?: string;
   action?: () => void;
 }) => {
   return (
@@ -22,7 +24,10 @@ const Button = ({
         )}
       >
         {/* Cut Corner */}
-        <Polygon className="w-3 h-3 bg-white" />
+        <Polygon className={cn(
+          "w-3 h-3",
+          polycolor
+        )} />
         {link ? <Link href={link}>{cta}</Link> : <span>{cta}</span>}
       </div>
     </button>
