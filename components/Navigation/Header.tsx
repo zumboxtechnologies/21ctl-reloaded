@@ -14,7 +14,7 @@ const Header = ({
     <nav className="px-[3%] py-6 lg:px-[5%] myFlex justify-between fixed top-0 right-0 left-0">
       <Logo />
       <NavigationMenuLinks navLinks={navLinks} />
-      <Button cta="Get Started Now" className={className} />
+      <Button cta="Get Started Now" className={className} polycolor="bg-white"/>
     </nav>
   );
 };
