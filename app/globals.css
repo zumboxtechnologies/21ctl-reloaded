@@ -9,6 +9,15 @@
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
 }
+.sm{
+  @apply font-semibold
+}
+.address{
+  @apply bg-[#FFFAC5] mb-6 py-10 px-6
+}
+.addressDiv{
+  @apply bg-white h-6 w-6
+}
 
 @layer base {
   * {
