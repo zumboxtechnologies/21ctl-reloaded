@@ -13,6 +13,7 @@ export default {
   			primaryBlack: '#292929',
   			primaryGray: '#525252',
   			primary: '#FDB906',
+  			carise: '#FEF1F9',
   			curiousBlue: '#EFF9FF',
   			dimGray: '#EFEFEF',
         lima: "#FAFFE5",
