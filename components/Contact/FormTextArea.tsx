@@ -1,5 +1,6 @@
 import React from "react";
 import { FieldError, FieldValues, UseFormRegister } from "react-hook-form";
+import PolygonBox from "../security/PolygonBox";
 
 interface FormTextAreaProps {
   label: string;
@@ -21,14 +22,14 @@ export default function FormTextArea({
   return (
     <div className="mb-4">
       <label className="block font-semibold mb-1">{label}</label>
-      <textarea
-        {...register(name, validation)}
-        rows={4}
-        placeholder={placeholder}
-        className={`w-full p-2 border rounded focus:outline-none ${
-          error ? "border-red-500" : "border-gray-300"
-        } focus:ring-2 focus:ring-yellow-500`}
-      ></textarea>
+      <PolygonBox classname="h-6 w-6 bg-white">
+        <textarea
+          {...register(name, validation)}
+          rows={4}
+          placeholder={placeholder}
+          className={`w-full p-2 bg-gray-100  focus:outline-none focus:ring-2 focus:ring-yellow-500`}
+        ></textarea>
+      </PolygonBox>
       {error && <p className="text-red-500 text-sm mt-1">{error.message}</p>}
     </div>
   );

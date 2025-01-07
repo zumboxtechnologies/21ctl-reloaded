@@ -7,6 +7,8 @@ import FormTextArea from "../../../components/Contact/FormTextArea";
 import FormSelect from "../../../components/Contact/FormSelect";
 import FormField from "../../../components/Contact/FormField";
 import Polygon from "@/components/Polygon";
+import SizedBox from "@/components/SizedBox";
+import PolygonBox from "@/components/security/PolygonBox";
 export default function ContactPage() {
   const {
     register,
@@ -80,7 +82,7 @@ export default function ContactPage() {
               }}
               error={errors.email}
             />
-
+            <SizedBox height={10} />
             {/* Phone */}
             <FormField
               label="Phone Number"
@@ -91,14 +93,14 @@ export default function ContactPage() {
               validation={{ required: "Phone number is required" }}
               error={errors.phone}
             />
-
+            <SizedBox height={5} />
+            <div className="h-[10px]" />
             {/* Subject */}
             <FormSelect
               label="Subject"
               name="subject"
               register={register}
               options={[
-                { value: "", label: "Select a subject" },
                 { value: "General Inquiry", label: "General Inquiry" },
                 { value: "Sales", label: "Sales" },
                 { value: "Technical Support", label: "Technical Support" },
@@ -129,12 +131,12 @@ export default function ContactPage() {
             />
 
             {/* Submit Button */}
-            <button
-              type="submit"
-              className="w-full bg-yellow-500 text-white py-2 px-4 rounded hover:bg-yellow-600 focus:outline-none"
-            >
-              Send Message
-            </button>
+            <div className="relative bg-primary w-fit py-2 px-8">
+              <button type="submit" className="font-semibold  ">
+                Send Message
+              </button>
+              <Polygon className="size-3 bg-white" />
+            </div>
           </form>
 
           {/* Contact Information */}
