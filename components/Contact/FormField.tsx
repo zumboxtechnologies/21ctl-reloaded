@@ -1,6 +1,7 @@
 import React from "react";
 import { FieldError, FieldValues, UseFormRegister } from "react-hook-form";
 import Polygon from "../Polygon";
+import PolygonBox from "../security/PolygonBox";
 
 interface FormFieldProps {
   label: string;
@@ -22,21 +23,23 @@ export default function FormField({
   error,
 }: FormFieldProps) {
   return (
-    <div className="mb-4">
+    <div className="">
       <label className="block  font-semibold mb-2">{label}</label>
-      <div className="relative">
-        <input
-          type={type}
-          {...register(name, validation)}
-          placeholder={placeholder}
-          className={`w-full p-3 text-black rounded-md shadow-sm border ${
-            error ? "border-red-500" : "border-gray-300"
-          } focus:ring-2 focus:ring-yellow-500 focus:outline-none`}
-        />
-        {/* Decorative Polygon */}
-        <Polygon className="absolute top-0 right-0 h-full w-8 bg-gray-100 pointer-events-none" />
+      <div className="bg-gray-100">
+        <PolygonBox classname="h-6 w-6 bg-white" otherclasses="">
+          <div className="relative">
+            <input
+              type={type}
+              {...register(name, validation)}
+              placeholder={placeholder}
+              className={`w-full p-3 text-black bg-transparent rounded-md  border-none focus:ring-2 focus:ring-yellow-500 focus:outline-none`}
+            />
+          </div>
+          {error && (
+            <p className="text-red-500 text-sm mt-1">{error.message}</p>
+          )}
+        </PolygonBox>
       </div>
-      {error && <p className="text-red-500 text-sm mt-1">{error.message}</p>}
     </div>
   );
 }

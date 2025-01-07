@@ -7,6 +7,7 @@ import FormTextArea from "../../../components/Contact/FormTextArea";
 import FormSelect from "../../../components/Contact/FormSelect";
 import FormField from "../../../components/Contact/FormField";
 import Polygon from "@/components/Polygon";
+import SizedBox from "@/components/SizedBox";
 export default function ContactPage() {
   const {
     register,
@@ -80,7 +81,7 @@ export default function ContactPage() {
               }}
               error={errors.email}
             />
-
+            <SizedBox height={10} />
             {/* Phone */}
             <FormField
               label="Phone Number"
@@ -91,14 +92,14 @@ export default function ContactPage() {
               validation={{ required: "Phone number is required" }}
               error={errors.phone}
             />
-
+            <SizedBox height={5} />
+            <div className="h-[10px]" />
             {/* Subject */}
             <FormSelect
               label="Subject"
               name="subject"
               register={register}
               options={[
-                { value: "", label: "Select a subject" },
                 { value: "General Inquiry", label: "General Inquiry" },
                 { value: "Sales", label: "Sales" },
                 { value: "Technical Support", label: "Technical Support" },

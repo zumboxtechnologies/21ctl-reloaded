@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FieldError, FieldValues, UseFormRegister } from "react-hook-form";
+import PolygonBox from "../security/PolygonBox";
 
 interface Option {
   value: string | number; // Options can have string or number values
@@ -34,36 +35,39 @@ export default function FormSelect({
   return (
     <div className={`mb-8 ${isOpen ? "h-auto" : "h-16"} transition-all`}>
       <label className="block font-semibold mb-2">{label}</label>
-      <div
-        className={`w-full p-3 rounded-md border shadow-sm bg-white text-gray-700 cursor-pointer ${
-          error ? "border-red-500" : "border-gray-300"
-        } focus:ring-2 focus:ring-yellow-500`}
-        onClick={() => setIsOpen((prev) => !prev)}
-      >
-        <div className="flex justify-between items-center">
-          <span>
-            {selected
-              ? options.find((opt) => opt.value === selected)?.label
-              : "Select an option"}
-          </span>
-          <span className="text-gray-500">
-            {isOpen ? "▲" : "▼"} {/* Text-based arrow */}
-          </span>
+
+      <PolygonBox classname="h-6 w-6 bg-white">
+        <div
+          className={`w-full p-3 bg-gray-100 text-black cursor-pointer  focus:ring-2 focus:ring-yellow-500`}
+          onClick={() => setIsOpen((prev) => !prev)}
+        >
+          <div className="flex  justify-between items-center">
+            <span>
+              {selected
+                ? options.find((opt) => opt.value === selected)?.label
+                : "Select an option"}
+            </span>
+            <span className="text-gray-500 mr-4">
+              {isOpen ? "▲" : "▼"} {/* Text-based arrow */}
+            </span>
+          </div>
         </div>
-      </div>
+      </PolygonBox>
 
       {isOpen && (
-        <div className="mt-2 ">
-          {options.map((option) => (
-            <div
-              key={option.value}
-              onClick={() => handleSelect(option.value)}
-              className="p-3 text-gray-700 hover:bg-gray-100 cursor-pointer"
-            >
-              {option.label}
-            </div>
-          ))}
-        </div>
+        <PolygonBox classname="h-6 w-6 bg-white">
+          <div className="mt-2 px-6 bg-gray-100 ">
+            {options.map((option) => (
+              <div
+                key={option.value}
+                onClick={() => handleSelect(option.value)}
+                className="p-3 border-b border-gray-200  text-gray-700 hover:bg-gray-100 cursor-pointer"
+              >
+                {option.label}
+              </div>
+            ))}
+          </div>
+        </PolygonBox>
       )}
 
       {error && <p className="text-red-500 text-sm mt-1">{error.message}</p>}
