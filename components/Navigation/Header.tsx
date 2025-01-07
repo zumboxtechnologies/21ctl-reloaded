@@ -11,10 +11,14 @@ const Header = ({
   className?: string;
 }) => {
   return (
-    <nav className="px-[3%] py-6 lg:px-[5%] myFlex z-[1000] justify-between fixed top-0 right-0 left-0">
+    <nav className="px-[3%] py-6 bg-white lg:px-[5%] myFlex z-[1000] justify-between fixed top-0 right-0 left-0">
       <Logo />
       <NavigationMenuLinks navLinks={navLinks} />
-      <Button cta="Get Started Now" className={className} polycolor="bg-white"/>
+      <Button
+        cta="Get Started Now"
+        className={className}
+        polycolor="bg-white"
+      />
     </nav>
   );
 };

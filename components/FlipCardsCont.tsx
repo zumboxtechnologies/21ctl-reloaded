@@ -1,34 +1,42 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import FlipCard from "./FlipCard";
 import Image from "next/image";
 import { gsap } from "gsap";
 
 const FlipCardsCont = () => {
+  const sectionRef = useRef(null);
   useEffect(() => {
-    const timeline = gsap.timeline();
+    const ctx = gsap.context(() => {
+      const timeline = gsap.timeline();
 
-    timeline
-      .from(".hexagon", {
-        opacity: 0,
-        scale: 0.2,
-        //rotation: 100,
-        stagger: {
-          amount: 1.5,
-          from: "start",
-        },
-      })
-      .from(".center-hexagon", {
-        opacity: 0,
-        scale: 0.5,
-        rotation: 360,
-        duration: 1.5, // Slightly longer duration for a smoother stop
-        ease: "expo.out", // Smooth deceleration
-      });
+      timeline
+        .from(".hexagon", {
+          opacity: 0,
+          scale: 0.2,
+          //rotation: 100,
+          stagger: {
+            amount: 1.5,
+            from: "start",
+          },
+        })
+        .from(".center-hexagon", {
+          opacity: 0,
+          scale: 0.5,
+          rotation: 360,
+          duration: 1.5,
+          ease: "expo.out",
+        });
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
   return (
-    <div className="relative -z-0 max-xx:w-[340px] w-[570px] h-[550px] mx-auto">
+    <div
+      ref={sectionRef}
+      className="relative -z-0 max-xx:w-[340px] w-[570px] h-[550px] mx-auto"
+    >
       {/* Center Hexagon */}
       <Image
         width={102}

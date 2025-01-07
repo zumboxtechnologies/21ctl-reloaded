@@ -35,7 +35,11 @@ const HomePage = () => {
             At 21st century tech we’re building bold digital infrastructure to
             solve today’s challenges <br /> and shape tomorrow’s industries.
           </p>
-          <Button className="animate-button" cta="Select destination" />
+          <Button
+            className="animate-button"
+            cta="Select destination"
+            polycolor="bg-white"
+          />
         </div>
         <div className="basis-[50%]">
           <FlipCardsCont />

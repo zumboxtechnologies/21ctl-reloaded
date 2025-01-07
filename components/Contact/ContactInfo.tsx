@@ -6,7 +6,7 @@ export default function ContactInfo() {
     <div className=" p-6 ">
       <PolygonBox classname=" addressDiv ">
         <div className="address">
-          <h2 className="text-lg font-bold ">Office Addresses</h2>
+          <h2 className="text-lg font-neuebold">Office Addresses</h2>
           <div className="flex flex-col gap-3 mt-[40px]">
             <p className="text-gray-600 mt-2">
               <strong>Head Office:</strong>
@@ -23,7 +23,7 @@ export default function ContactInfo() {
 
       <PolygonBox classname="addressDiv ">
         <div className="address flex flex-col gap-[40px]">
-          <h2 className="text-lg font-bold ">Phone Numbers</h2>
+          <h2 className="text-lg font-neuebold ">Phone Numbers</h2>
           <div className="flex flex-col gap-2">
             <p className="text-gray-600 mt-2">
               General Inquiries: +XX XXXXXXXX
@@ -38,7 +38,7 @@ export default function ContactInfo() {
 
       <PolygonBox classname="addressDiv">
         <div className="address flex flex-col gap-[40px]">
-          <h2 className="text-lg font-bold ">Email Addresses</h2>
+          <h2 className="text-lg font-neuebold ">Email Addresses</h2>
           <div className="flex flex-col gap-3">
             <p className="text-gray-600 mt-2">
               <span className="sm">General</span>: info@2ctcl.com
