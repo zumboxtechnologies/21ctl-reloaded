@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer utilities {
+  .clip-hexagon {
+    clip-path: polygon(100% 0, 100% 100%, 0 0);
+  }
+  .clip-triangle {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  }
+}
 
 @layer base {
   * {
