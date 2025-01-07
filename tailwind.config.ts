@@ -16,14 +16,14 @@ export default {
   			carise: '#FEF1F9',
   			curiousBlue: '#EFF9FF',
   			dimGray: '#EFEFEF',
-        lima: "#FAFFE5",
+  			lima: '#FAFFE5',
   			dimYellow: '#FFFDEA',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			cerise: {
   				DEFAULT: '#EC268F',
   				light: '#FA3AA9',
-				lighter: "#FEE5F5"
+  				lighter: '#FEE5F5'
   			},
   			card: {
   				DEFAULT: 'hsl(var(--card))',
