@@ -11,7 +11,7 @@ const FAQs = () => {
           <p>Need to understand things quickly check out FAQs</p>
         </div>
         <div>
-          <h5 className="">Frequenty Asked Question</h5>
+          <h5 className="mb-4">Frequenty Asked Question</h5>
           <AccordionDemo data={faqs} />
         </div>
       </div>

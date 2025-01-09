@@ -14,7 +14,7 @@ const SecurityHero = ({
   buttontext?: string;
 }) => {
   return (
-    <div className="myContainer bg-cerise w-full h-[570px] myFlex justify-center">
+    <div className="myContainer mb-16 md:mb-28 bg-cerise w-full h-[570px] myFlex justify-center">
       <div className="text-center  max-w-[877px] space-y-2">
         <h1 className="text-white">{title}</h1>
         {lightbgTitle && (

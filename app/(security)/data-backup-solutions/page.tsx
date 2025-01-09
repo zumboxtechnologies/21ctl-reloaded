@@ -25,17 +25,17 @@ const DataBackupSolutions = () => {
           </>
         }
       />
-      <div className="myContainer mt-20">
+      <div className="myContainer">
         <Equal>
           <div>
-            <h4 className="text-2xl md:text-[24px] md:leading-[44.8px] text-primaryGray">
+            <h4 className="text-xl md:text-[24px] md:leading-[44.8px] text-primaryGray">
               Remember when 4G felt fast? That&apos;s like comparing a paper
               airplane to a rocket ship. Welcome to the realm where milliseconds
               matter and possibilities explode. Our 5G infrastructure isn&apos;t
               just an upgrade {'–'} it&apos;s a portal to tomorrow.
             </h4>
           </div>
-          <div>
+          <div className="flex flex-col gap-10">
             <h2>
               Beyond Speed. <br /> Beyond Connection.
             </h2>
@@ -45,7 +45,7 @@ const DataBackupSolutions = () => {
       </div>
       <GrayBgSection
         buttontext="Academy"
-        title="Delivering Complete Multi-Cloud Security Coverage Across Environments, Workloads, and Identities"
+        title="We provide world-class services to the top 1000 companies in Nigeria and key residential areas."
         smallText="Start learning"
       />
       <SliderContainer />
@@ -54,22 +54,15 @@ const DataBackupSolutions = () => {
           We&apos;re here for you, from always-on customer support to thousands
           of integrations designed for every use case
         </h2>
-        <div className="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
+        <div className="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-4 mt-16">
+          {Array.from({ length: 3 }, (_, i) => (
+            <SmallGrayCard
+              key={i}
+              title="Schedule regular, automated backups."
+              subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
+              smallText="Get Demo"
+            />
+          ))}
         </div>
       </div>
       <div className="myContainer space-y-16">
