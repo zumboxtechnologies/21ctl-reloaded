@@ -29,7 +29,6 @@ const CloudSecurity = () => {
       <GrayBgSection
         title="Delivering Complete Multi-Cloud Security Coverage Across Environments, Workloads, and Identities"
         smallText="Start learning"
-        classname="mt-20"
       />
       <div className="myContainer">
         <Equal>
@@ -95,21 +94,14 @@ const CloudSecurity = () => {
           Take Control Of Your Entire Security Ecosystem
         </h2>
         <div className="grid grid-col md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
-          <SmallGrayCard
-            title="Schedule regular, automated backups."
-            subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
-            smallText="Get Demo"
-          />
+          {Array.from({ length: 3 }, (_, i) => (
+            <SmallGrayCard
+              key={i}
+              title="Schedule regular, automated backups."
+              subTitle="Ensure your backups remain current and functional with continuous monitoring and periodic testing."
+              smallText="Get Demo"
+            />
+          ))}
         </div>
       </div>
       <div className="myContainer">
