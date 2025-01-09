@@ -19,7 +19,7 @@ const SmallGrayCard = ({
       style={{ minWidth: width }}
       className="bg-dimGray min-h-[450px] flex items-end p-7"
     >
-      <div className="space-y-5 max-w-[700px]">
+      <div className="space-y-5 max-w-[700px] ">
         {button && (
           <Button
             cta={button}
