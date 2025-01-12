@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+
 import { useForm } from "react-hook-form";
 import ContactInfo from "@/components/Contact/ContactInfo";
 import FormFileUpload from "../../../components/Contact/FormFileUpload";
@@ -8,7 +8,6 @@ import FormSelect from "../../../components/Contact/FormSelect";
 import FormField from "../../../components/Contact/FormField";
 import Polygon from "@/components/Polygon";
 import SizedBox from "@/components/SizedBox";
-import PolygonBox from "@/components/security/PolygonBox";
 export default function ContactPage() {
   const {
     register,
