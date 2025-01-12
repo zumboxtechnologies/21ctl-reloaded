@@ -28,7 +28,7 @@ const HomePage = () => {
         <div className="basis-[50%] space-y-4">
           <h1>Welcome to</h1>
           <div className="relative bg-primary w-fit py-2 px-8">
-            <h1>21CTL Website</h1>
+            <h1 className="whitespace-nowrap">21CTL Website</h1>
             <Polygon className="size-10 bg-white" />
           </div>
           <p className="animate-text text-primaryGray tracking-wide">
